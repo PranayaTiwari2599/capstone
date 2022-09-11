@@ -18,16 +18,12 @@ public class ProductController {
 	
 	
 	@Autowired
-	ProductServiceInterface pi; 
+	 private ProductServiceInterface pi; 
 	
 	@PostMapping("createproduct")
 	public String addProduct(@RequestBody Product p1) {
 		int i=pi.createProduct(p1);
-	System.out.println(p1.getProduct_Brand());
-	System.out.println(p1.getProduct_id());
-	System.out.println(p1.getProduct_name());
-	System.out.println(p1.getProduct_price());
-	System.out.println(p1.getQuantity());
+	
 		if(i>0) {
 			return "Product Created";
 		}

@@ -16,7 +16,7 @@ public class ProductService implements ProductServiceInterface{
 
 	@Autowired
 	
-	ProductInterfaceDao pd;
+	private ProductInterfaceDao pd;
 	
 	
 	@Override
